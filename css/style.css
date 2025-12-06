@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Lora:ital,wght@0,400..700;1,400..700&family=Momo+Trust+Display&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Rubik+80s+Fade&family=Rubik+Mono+One&display=swap');
+/* Body */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header .logo img {
+    width: 200px;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 0 10px 0 black;
+
+}
+header nav ul li {
+    display: inline-block;
+}
+header nav ul li a {
+    text-decoration: none;
+    margin:0 14px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Poppins;
+}
+/* Main */
+main{
+    margin-top: 100px;
+}
+
+.hero-section{
+   font-family: Poppins;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 600px;
+   position: relative;
+   background-image: url('../assets/img/homeeee.png');
+   background-size: cover;       
+   background-position: center;  
+   background-repeat: no-repeat; 
+   background-attachment: scroll; 
+}
+.hero-section a {
+    background-color:#78caed;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    /* border-radius: 15px; */
+    margin-top: 10px;
+}
+
+.texthero {
+    max-width: 80%;
+    z-index: 2;
+    position: relative;   
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); /* efek gelap seperti opacity */
+    z-index: 1;
+}
+
+.texthero h1 {
+    font-size: 40px;
+    color: white;
+    font-weight:bold;
+}
+.texthero h2 {
+    color: #78caed;
+    font-size: 35px;
+}
+.texthero p {
+    font-weight:bold;
+    font-size: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    color:white;
+}
+/* tentang kami home */
+.tentangkami-home{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 150px;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.tentangkami-home img {
+    width: 780px;
+    height: 780px;
+
+}
+
+.texttentangkamihome{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+}
+.texttentangkamihome{
+    text-align: justify;
+}
+
+.texttentangkamihome a {
+    background-color:#5b7690;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    /* border-radius: 15px; */
+    margin-top: 10px;
+    display: inline-block;
+    width: fit-content;
+    align-self: center;
+}
+
+.texttentangkamihome h1{
+    text-align: start;
+}
+
+/* home alasan pilih */
+.alasanpilih {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-bottom: 20px;
+background-color: #5b7690;
+/* border-radius: 2; */
+padding: 10px;
+padding-bottom: 50px;
+
+}
+.alasanpilih h1 {
+    font-family: 'Poppins';
+    text-align: center;
+    color: white;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: start;
+    width: 300px;
+    height: 420px;         /* tinggi fix */
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-family: 'Poppins';
+    margin: 17px;
+}
+
+
+
+.card-alasan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card h1 {
+    font-size: 20px;
+    color: black;
+}
+.card  p{
+    max-width: 250px;
+    text-align: justify;
+}
+.card img {
+    width: 170px;
+    height: 170px;
+}
+/* mobilhome */
+.listmobil-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-image: url('../assets//img/hiasantepi.png');
+   background-size: cover;   
+   background-repeat: no-repeat; 
+}
+
+/* cardmobil */
+.cardmobil {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: start;
+    width: 300px;
+    height: 400px;         /* tinggi fix */
+    padding: 20px;
+    /* border-radius: 20px; */
+    border: 1px solid black;
+    font-family: 'Poppins';
+    margin: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
