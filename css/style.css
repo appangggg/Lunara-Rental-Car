@@ -35,7 +35,7 @@ header nav ul li a {
 }
 /* Main */
 main{
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .hero-section{
@@ -147,7 +147,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding-bottom: 20px;
-background-color: #5b7690;
+background-color: whitesmoke;
 /* border-radius: 2; */
 padding: 10px;
 padding-bottom: 50px;
@@ -156,7 +156,7 @@ padding-bottom: 50px;
 .alasanpilih h1 {
     font-family: 'Poppins';
     text-align: center;
-    color: white;
+    color: #5b7690;
 }
 .card {
     display: flex;
@@ -200,36 +200,405 @@ padding-bottom: 50px;
     justify-content: center;
     align-items: center;
     padding: 50px;
-    background-image: url('../assets//img/hiasantepi.png');
+    /* background-image: url('../assets//img/hiasanatass.png'); */
    background-size: cover;   
    background-repeat: no-repeat; 
+   color: #107dac;
+   font-family: Poppins;
 }
 
-/* cardmobil */
-.cardmobil {
+
+        .car-card-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .car-card-section *  {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .cccard {
+            background: white;
+            width: 380px; /* Lebar sesuai gambar referensi */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            margin:0 20px;
+           
+        }
+
+        /* Gambar */
+        .cc-image {
+            padding: 20px 20px 10px;
+            text-align: center;
+        }
+        
+        .cc-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Header */
+        .cc-header {
+            text-align: center;
+            padding: 0 20px 10px;
+        }
+
+        .cc-header h3 {
+            color: #000;
+            margin: 0 0 15px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .cc-price-row {
+            color: #666;
+            margin-bottom: 6px;
+            font-size: 14px;
+            flex-direction: row;
+        }
+
+        .cc-price-row .cc-price {
+            color: #444;
+            font-weight: 700;
+            margin-left: 3px;
+        }
+
+        .cc-price-row.small {
+            font-size: 13px;
+        }
+
+        /* Divider halus */
+        .cc-divider {
+            border: 0;
+            border-top: 1px solid #f0f0f0;
+            margin: 10px 0;
+        }
+
+        /* Fitur List */
+        .cc-body {
+            padding: 10px 20px;
+        }
+
+        .cc-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .cc-features li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #222;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .cc-features li i {
+            color: #107dac; /* Biru Ikon */
+            width: 25px;
+            margin-top: 3px; 
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .cc-desc {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        /* Keunggulan (Accordion style) */
+        .cc-extras {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-top: 1px solid #f0f0f0;
+            color: #666;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .cc-extras i {
+            color: #ccc;
+        }
+
+        /* Tombol */
+        .cc-footer {
+            padding: 0 20px 20px;
+        }
+
+        .cc-btn {
+            background-color: #107dac;
+            color: white;
+            border: none;
+            padding: 14px 0;
+            width: 100%;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s;
+            border-radius: 2px;
+        }
+         .terms-simple-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px 20px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ts-container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Judul di atas garis */
+        .ts-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        /* Garis pemisah di bawah judul */
+        .ts-divider {
+            border: 0;
+            border-top: 1px solid #ccc; /* Warna garis abu-abu */
+            margin-bottom: 30px;
+        }
+
+        /* Kotak konten utama */
+        .ts-box {
+            border: 1px solid #e0e0e0; /* Garis tepi kotak */
+            padding: 30px;
+            border-radius: 4px; /* Sedikit melengkung di sudut */
+            background-color: #fff; /* Latar putih */
+        }
+
+        /* Daftar Poin (Bullet Points) */
+        .ts-list {
+            padding-left: 20px; /* Jarak untuk bullet */
+            margin: 0;
+        }
+
+        .ts-list li {
+            margin-bottom: 12px; /* Jarak antar poin */
+            font-size: 17px;
+            font-weight: 500;
+            color: #444; /* Warna teks abu-abu gelap */
+            line-height: 1.6; /* Jarak antar baris teks */
+            list-style-type: disc; /* Bullet bulat padat */
+        }
+
+        .galeri {
+            font-family: 'Poppins', sans-serif;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+        .galeri h1 {
+            text-align: center;
+            color: #5b7690;
+            margin-bottom: 30px;
+        }
+        
+        .galeri img {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            filter: drop-shadow(2px 4px 6px black);
+            object-fit: cover;
+        }
+        .galeri-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Styling Utama Footer */
+.main-footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    padding-top: 50px;
+    border-top: 1px solid #eee; /* Garis pemisah tipis di atas */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: flex;
+    justify-content: space-between; /* Menyebar kolom ke kiri & kanan */
+    flex-wrap: wrap; /* Agar responsif di HP */
+    gap: 30px;
+}
+
+/* Kolom Footer */
+.footer-col {
+    flex: 1; /* Lebar kolom seimbang */
+    min-width: 200px; /* Batas minimal lebar agar tidak gepeng di HP */
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 800; /* Bold tebal */
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Styling BANK (Kolom 1) --- */
+.bank-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bank-logo {
+    width: 60px; /* Ukuran logo bank */
+    height: auto;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+.bank-info {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    align-items: center;
-    justify-content: start;
-    width: 300px;
-    height: 400px;         /* tinggi fix */
-    padding: 20px;
-    /* border-radius: 20px; */
-    border: 1px solid black;
-    font-family: 'Poppins';
-    margin: 17px;
 }
 
+.acc-num {
+    font-weight: 700;
+    color: #107dac; /* Warna biru angka rek */
+    font-size: 14px;
+}
 
+.acc-name {
+    font-size: 11px;
+    color: #666;
+}
 
+/* --- Styling KONTAK (Kolom 2) --- */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
 
+.contact-item i {
+    font-size: 20px;
+    margin-right: 10px;
+    width: 25px; /* Lebar tetap agar teks rata */
+}
 
+/* Warna khusus ikon kontak */
+.contact-item .fa-whatsapp { color: #25D366; } /* Hijau WA */
+.contact-item .fa-phone { color: #000; } 
 
+/* --- Styling ALAMAT & SOSMED (Kolom 3) --- */
+.address-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
 
+.soc-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Membuat lingkaran */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
 
+.soc-btn:hover { opacity: 0.8; }
 
+/* Warna tombol sosmed sesuai brand */
+.soc-btn.fb {
+     background-color: #dbeafe; 
+     color: #1877F2; 
+    }
+.soc-btn.in { 
+   
+     background-color: #0077b5; }
+.soc-btn.ig {
+     background-color: #E1306C;
+        background-image: url('../assets/img/ig.jpg');
+      background-size: cover;
+     }
+.soc-btn.tr {
+     background-color: #00af87; 
+    }
 
+/* Tweak khusus agar ikon FB sesuai gambar referensi (lingkaran biru muda, ikon biru tua) */
+.soc-btn.fb { 
+    background-color: #e8f0fe; 
+    color: #4267B2; 
+    font-weight: bold;
+}
 
+/* --- Styling LOGO (Kolom 4) --- */
+.logo-col {
+    display: flex;
+    justify-content: flex-end; /* Logo rata kanan */
+    align-items: flex-start;
+}
 
+.main-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* --- COPYRIGHT BAR (Bawah) --- */
+.footer-copyright {
+    background-color:#5b7690; /* Warna biru langit footer */
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* RESPONSIVE: Agar rapi di HP */
+@media (max-width: 768px) {
+    .logo-col {
+        justify-content: flex-start; /* Logo pindah ke kiri di HP */
+        margin-top: 20px;
+    }
+}
