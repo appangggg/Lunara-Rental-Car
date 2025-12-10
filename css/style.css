@@ -35,7 +35,7 @@ header nav ul li a {
 }
 /* Main */
 main{
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 .hero-section{
@@ -107,8 +107,8 @@ main{
 }
 
 .tentangkami-home img {
-    width: 780px;
-    height: 780px;
+    width: 750px;
+    height: 750px;
 
 }
 
