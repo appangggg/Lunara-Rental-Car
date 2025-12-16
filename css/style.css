@@ -110,6 +110,7 @@ main{
 .tentangkami-home img {
     width: 600px;
     height: 600px;
+     /* margin: 20px; */
 
 }
 
@@ -775,12 +776,10 @@ header.scrolled {
   margin-right: 15px; /* Jarak antara titik dan teks */
 }
 
-/* Teks Deskripsi */
 .reason-text {
   font-size: 16px;
 }
 
-/* Bagian Judul Poin (Bold) */
 .reason-text strong {
   font-weight: bold;
   margin-right: 5px;
@@ -817,6 +816,8 @@ header.scrolled {
 .lunara-testimoni .container {
     max-width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 /* Layout Grid */
@@ -825,6 +826,7 @@ header.scrolled {
   flex-wrap: wrap;
     gap: 40px;
     margin: 10px;
+    justify-content: center;
     margin-bottom: 50px;
 }
 
@@ -835,7 +837,7 @@ header.scrolled {
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
-    max-width: 450px;
+    max-width: 400px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Efek bayangan halus */
 }
 
@@ -1038,15 +1040,26 @@ button#btnKirim:hover {
 
 /* Responsif */
 @media (max-width: 768px) {
-    /* --- 1. PERBAIKAN HEADER & BANNER JUDUL --- */
+
+.listmobil-home{
+    text-align: center;
+}
+    .tentangkami-home img {
+        width: 100%; /* Gambar full lebar di HP */
+        height: auto; /* Tinggi menyesuaikan agar tidak gepeng */
+    }
+    .tentangkami-home {
+        padding:30px ; /* Kurangi padding di HP */
+        /* flex-direction: column; Susun vertikal di HP */
+        /* align-items: center; */
+        
+    }
     .sectionatas {
         height: 250px; /* Kurangi tinggi banner agar tidak memakan tempat di HP */
         background-position: center;
     }
 
     .bungkush1 {
-        /* PENTING: Ubah padding 200px menjadi 20px. 
-           Padding besar membuat teks tergencet di layar kecil. */
         padding: 100px 20px 0 20px; 
         justify-content: center; /* Tengahkan judul */
         align-items: center;
@@ -1091,7 +1104,6 @@ button#btnKirim:hover {
         border-radius: 8px;
     }
 
-    /* --- 3. TWEAK NAVIGASI (Opsional jika belum rapi) --- */
     header .logo img {
         width: 150px; /* Kecilkan logo sedikit di HP */
     }
@@ -1124,7 +1136,6 @@ button#btnKirim:hover {
         display: block;
     }
 
-    /* ANIMASI HAMBURGER JADI X */
     .hamburger.active .bar:nth-child(1) {
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
@@ -1142,7 +1153,7 @@ button#btnKirim:hover {
         background-color: #107dac;
     }
 
-    /* 2. MENU SIDEBAR (Muncul dari Kanan) */
+
     header nav ul.nav-menu {
         position: fixed;
         top: 0;
@@ -1219,6 +1230,15 @@ button#btnKirim:hover {
     .info-column {
         flex: 1;
         width: 100%;
+    }
+
+    .texthero h1 {
+        font-size: 30px;
+    }
+      .texthero h2 {
+        font-size: 25px;
+    }  .texthero p {
+        font-size: 18px;
     }
 }
     
