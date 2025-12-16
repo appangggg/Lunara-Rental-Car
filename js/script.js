@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. HAMBURGER MENU & NAVIGASI MOBILE
     // =========================================
     const hamburger = document.querySelector(".hamburger");
+
     const navMenu = document.querySelector(".nav-menu");
+    
     const navLinks = document.querySelectorAll(".nav-link");
 
     if(hamburger && navMenu) {
@@ -91,4 +93,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+});
+document.getElementById('btnKirim').addEventListener('click', function() {
+    // 1. Ambil nilai dari Form
+    var nama = document.getElementById('nama').value;
+    var email = document.getElementById('email').value;
+    var pesan = document.getElementById('pesan').value;
+
+    // Validasi sederhana (jika nama atau pesan kosong, jangan kirim)
+    if (nama === "" || pesan === "") {
+        alert("Mohon isi Nama dan Pesan terlebih dahulu.");
+        return;
+    }
+
+    // 2. Tentukan Nomor WhatsApp Tujuan (Format internasional tanpa +)
+    // Sesuai gambar: 0852-9957-8607 -> 6285299578607
+    var nomorTujuan = "6285299578607";
+
+    // 3. Format Pesan
+    // \n digunakan untuk baris baru (enter)
+    var teksLengkap = `Halo Admin, saya ingin mengirim pesan via Website.\n\n` +
+                      `Nama: ${nama}\n` +
+                      `Email: ${email}\n\n` +
+                      `Pesan:\n${pesan}`;
+
+    // 4. Buat URL WhatsApp API
+    // encodeURIComponent digunakan agar spasi dan enter terbaca dengan benar di URL
+    var urlWA = `https://wa.me/${nomorTujuan}?text=${encodeURIComponent(teksLengkap)}`;
+
+    // 5. Buka tab baru menuju WhatsApp
+    window.open(urlWA, '_blank');
 });

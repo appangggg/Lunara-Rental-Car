@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Lora:ital,wght@0,400..700;1,400..700&family=Momo+Trust+Display&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Rubik+80s+Fade&family=Rubik+Mono+One&display=swap');
 /* Body */
 body{
+    font-family: 'Poppins', sans-serif; /* Pastikan font ini terload, atau ganti Arial */
     margin: 0;
     padding: 0;
 }
@@ -33,7 +34,7 @@ header nav ul li a {
     font-weight: bold;
     font-family: Poppins;
 }
-/* Main */
+
 main{
     margin-top: 50px;
 }
@@ -249,7 +250,7 @@ padding-bottom: 50px;
         
         .cc-image img {
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: contain;
         }
 
@@ -691,7 +692,7 @@ header.scrolled {
 
 .map-wrapper iframe {
     width: 100%;
-    height: 450px; /* Tinggi peta */
+    height: 450px; 
     display: block;
 }
 
@@ -701,20 +702,24 @@ header.scrolled {
     margin-bottom: 20px;
     font-weight: 700;
 }
+
 .deskripsi  {
     font-family: 'Poppins', sans-serif;
-    padding: 50px 150px;
+    padding: 50px ;
     text-align: center;
     display: flex;
     flex-direction:column ;
 }
-
-.teks-deskripsi {
+.teks-deskripsi p {
+    width: 50%;
+}
+.teks-deskripsi  {
     display: flex;
     text-align: justify;
     gap: 50px;
     color: #666;
     font-weight: 500;
+    width: 100%;
 }
 
 .alasan-memilih-kami img {
@@ -732,7 +737,7 @@ header.scrolled {
 }
 /* Container Utama (Latar Belakang Biru) */
 .lunara-why-us {
-  background-color:#5b7690; /* Warna biru mirip gambar */
+  background-color:#5b7690; 
   color: #ffffff;
   padding: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -752,7 +757,9 @@ header.scrolled {
 .reasons-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Jarak antar poin */
+  gap: 20px; 
+  width: 100%;
+  background-color: #5b7690;
 }
 
 /* Item per poin */
@@ -797,37 +804,27 @@ header.scrolled {
     display: flex;
 }
 
-/* Responsif untuk Layar HP */
-@media (max-width: 768px) {
-  .lunara-why-us {
-    padding: 20px;
-  }
-  
-  .section-title {
-    font-size: 24px;
-  }
-  
-  .reason-text {
-    font-size: 14px;
-  }
-}
+
 /* Container Utama */
 .lunara-testimoni {
     padding: 60px 20px;
     background-color: #f9f9f9; /* Background sedikit abu agar card lebih pop-up */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .lunara-testimoni .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 /* Layout Grid */
 .testimoni-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+  flex-wrap: wrap;
     gap: 40px;
+    margin: 10px;
     margin-bottom: 50px;
 }
 
@@ -836,6 +833,9 @@ header.scrolled {
     background: #fff; /* Memberi background putih pada kartu */
     padding: 20px; /* Sedikit padding agar rapi */
     border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Efek bayangan halus */
 }
 
@@ -910,17 +910,207 @@ header.scrolled {
     transform: translateY(0);
     opacity: 1;
 }
+/* Reset dasar untuk font agar mirip */
+
+
+.contact-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+/* Kolom Kiri - Form */
+.form-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #333; /* Border hitam tipis sesuai gambar */
+    border-radius: 8px;
+    box-sizing: border-box; /* Agar padding tidak melebarkan elemen */
+    font-size: 14px;
+    color: #555;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end; /* Tombol di kanan */
+}
+
+button#btnKirim {
+    background-color: #5b7690; /* Warna biru muda sesuai gambar */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; /* Rounded pill shape */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button#btnKirim:hover {
+    background-color: #5b7690;
+}
+
+/* Kolom Kanan - Info Card */
+.info-column {
+    flex: 0 0 400px; /* Lebar fix untuk card info */
+    min-width: 300px;
+}
+
+
+
+.info-card {
+    background-color: #F3F4F6; /* Warna abu-abu background */
+    padding: 40px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.info-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.icon-circle {
+    background-color: #5b7690; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.info-text h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.info-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
 
 /* Responsif */
 @media (max-width: 768px) {
-    .testimoni-wrapper {
-        grid-template-columns: 1fr;
+    /* --- 1. PERBAIKAN HEADER & BANNER JUDUL --- */
+    .sectionatas {
+        height: 250px; /* Kurangi tinggi banner agar tidak memakan tempat di HP */
+        background-position: center;
     }
-}
-/* Responsif untuk HP */
-@media (max-width: 768px) {
-    .lokasi-section {
+
+    .bungkush1 {
+        /* PENTING: Ubah padding 200px menjadi 20px. 
+           Padding besar membuat teks tergencet di layar kecil. */
+        padding: 100px 20px 0 20px; 
+        justify-content: center; /* Tengahkan judul */
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Pastikan lebar full */
+        box-sizing: border-box; /* Agar padding tidak menambah lebar total */
+    }
+
+    .bungkush1 h1 {
+        font-size: 28px; /* Kecilkan sedikit font judul */
+    }
+
+    /* --- 2. PERBAIKAN TAMPILAN GALERI --- */
+    .galeri {
+        padding: 30px 15px; /* Kurangi padding container luar */
+    }
+
+    .galeri h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .galeri-container {
+        display: flex;
+        flex-direction: column; /* Susun gambar ke bawah di HP */
+        align-items: center;
+        gap: 20px; /* Jarak antar gambar */
+    }
+
+    .galeri-card {
+        width: 100%; /* Card mengambil lebar penuh */
+        display: flex;
+        justify-content: center;
+    }
+
+    .galeri img {
+        /* Ubah ukuran gambar agar fleksibel (fluid) */
+        width: 100%; 
+        max-width: 100%; /* Agar tidak keluar layar */
+        height: auto; /* Tinggi menyesuaikan agar gambar tidak gepeng */
+        margin: 0; /* Hapus margin bawaan yang mungkin mengganggu */
+        border-radius: 8px;
+    }
+
+    /* --- 3. TWEAK NAVIGASI (Opsional jika belum rapi) --- */
+    header .logo img {
+        width: 150px; /* Kecilkan logo sedikit di HP */
+    }
+     .lunara-why-us {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .reason-text {
+    font-size: 14px;
+  }
+  .lokasi-section {
         padding: 40px 15px;
+    }
+    .lunara-why-us{
+        width: 100%;
     }
     
     .lokasi-section h1 {
@@ -930,15 +1120,6 @@ header.scrolled {
     .map-wrapper iframe {
         height: 300px; /* Peta tidak terlalu tinggi di HP */
     }
-}
-
-/* Posisi Awal Garis */
-.hamburger .bar:nth-child(1) { top: 0; }
-.hamburger .bar:nth-child(2) { top: 50%; transform: translateY(-50%); }
-.hamburger .bar:nth-child(3) { bottom: 0; }
-
-/* --- RESPONSIVE MOBILE (HP) --- */
-@media (max-width: 768px) {
     .hamburger {
         display: block;
     }
@@ -1028,11 +1209,23 @@ header.scrolled {
     header nav ul li a:hover::before {
         width: 50px; /* Garis pendek yang manis */
     }
-}
-
-@media (max-width: 768px) {
-    .logo-col {
+        .logo-col {
         justify-content: flex-start; /* Logo pindah ke kiri di HP */
         margin-top: 20px;
     }
+     .container {
+        flex-direction: column;
+    }
+    .info-column {
+        flex: 1;
+        width: 100%;
+    }
 }
+    
+
+
+/* Posisi Awal Garis */
+.hamburger .bar:nth-child(1) { top: 0; }
+.hamburger .bar:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.hamburger .bar:nth-child(3) { bottom: 0; }
+
